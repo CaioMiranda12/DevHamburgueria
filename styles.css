@@ -1,0 +1,617 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.bg {
+    background-color: rgb(224, 186, 114);
+}
+
+.bg header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bg header i {
+    display: none;
+}
+
+.bg header img {
+    width: 120px;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.bg header nav ul li a {
+    color: #000000;
+    font-family: arial;
+    font-weight: bold;
+    padding: 20px;
+    transition: .3s ease-in;
+}
+
+.bg header nav ul li a:hover {
+    color: tomato;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal .titulo {
+    max-width: 50%;
+    justify-self: center;
+}
+
+.principal .titulo h1 {
+    font-size: 4rem;
+    font-family: arial;
+}
+
+.principal .titulo h4 {
+    font-size: 3rem;
+    font-family: arial;
+}
+
+.principal img {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.principal figure {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal span {
+    position: absolute;
+    font-size: 2.3rem;
+    bottom: 100px;
+    color: aliceblue;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+@media(max-width: 700px) {
+    .bg header nav ul {
+        display: none;
+    }
+
+    .bg header nav ul.ativo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        margin-top: 30px;
+        padding: 40px;
+        animation: animation .5s forwards;
+    }
+
+    nav ul li {
+        text-decoration: underline;
+        margin-bottom: 30px;
+    }
+
+    .bg header img {
+        width: 200px;
+    }
+
+    .bg header i {
+        display: block;
+        position: absolute;
+        right: 80px;
+        font-size: 2.5rem;
+    }
+
+    .bg header i.ativo nav ul {
+        display: block !important;
+    }
+
+    .principal {
+        grid-template-columns: 1fr;
+    }
+
+    .principal span {
+        left: 60px;
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width: 500px) {
+    .principal .titulo {
+        justify-self: left;
+        margin-left: 10px;
+    }
+
+    .bg {
+        width: 100vw;
+    }
+}
+
+@keyframes animation {
+    from {
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* POPULAR */
+
+.titulo-hamburguer {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+    padding: 80px 40px 60px 80px;
+}
+
+.popular {
+    border-radius: 4px 0 0 4px;
+    background-image: url("./assets/hamburguer1.png");
+    grid-column: 1/2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 430px;
+    padding: 10px;
+}
+
+.popular h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.popular span {
+    color: yellow;
+    font-weight: bold;
+}
+
+.popular-secundario {
+    display: grid;
+    gap: 14px;
+}
+
+.terca {
+    border-radius: 4px 0 0 4px;
+    background-image: url("./assets/hamburguer2.png");
+    padding: 10px;
+    height: 200px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: stretch;
+}
+
+.terca h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.terca span {
+    font-weight: bold;
+    color: yellow;
+}
+
+.quarta {
+    border-radius: 4px 0 0 4px;
+    background-image: url("./assets/hamburguer3.png");
+    height: 200px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: stretch;
+    padding: 10px;
+}
+
+.quarta h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.quarta span {
+    font-weight: bold;
+    color: yellow;
+}
+
+@media(max-width: 700px) {
+    .titulo-hamburguer {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .popular {
+        height: 200px;
+    }
+
+
+}
+
+/* CARDAPIO */
+
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 15px;
+}
+
+.cardapio h2 {
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.cardapio h3 {
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.cardapio h1 {
+    font-size: 4rem;
+    grid-column: 1/-1;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: monospace;
+}
+
+.cardapio p {
+    width: 70%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.burguer-cardapio {
+    display: grid;
+    margin: 6px 40px;
+    gap: 10px;
+    justify-items: center;
+    align-items: start;
+    
+    box-shadow: 0 5px 10px 2px;
+    border-radius: 40% 5px 40% 5px;
+}
+
+.burguer-cardapio img {
+    max-width: 60%;
+}
+
+.burguer-cardapio p {
+    width: 80%;
+}
+
+.burguer-cardapio .button-cardapio {
+    padding: 15px 40px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: tomato;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: .5s ease-in;
+}
+
+.burguer-cardapio .button-cardapio:hover {
+    opacity: .6;
+}
+
+@media(max-width: 900px) {
+    .cardapio {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 700px) {
+    .cardapio {
+        grid-template-columns: 1fr;
+    }
+
+    .burguer-cardapio {
+        box-shadow: 3px;
+        border-radius: 6px;
+    }
+}
+
+/* DISCOVER */
+
+.discover {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.discover .grid-texto {
+    display: grid;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: end;
+    margin: 0 0 0 150px;
+}
+
+.discover p {
+    max-width: 80%;
+    margin: 0 0 0 150px;
+    display: none;
+}
+
+.discover p.ativo {
+    display: block;
+    animation: animationRename .8s forwards;
+}
+
+.flex-discover {
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+@keyframes animationRename {
+    from {
+        transform: translate3d(90px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media(max-width: 900px) {
+    .discover {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .discover div {
+        text-align: center;
+    }
+
+    .discover .grid-texto {
+        grid-row: 2;
+        margin: -60px auto 0 auto;
+        text-align: center;
+    }
+
+    .discover p {
+        display: none;
+        margin: 0 auto 30px auto !important;
+        text-align: center !important;
+    }
+
+    @media(max-width: 500px) {
+        .discover img {
+            height: 200px;
+            width: 100vw;
+        }
+    }
+}
+
+/* RESERVA */
+
+.reserva-titulo {
+    font-size: 4rem;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.reserva {
+    background-image: url(./assets/reserva-background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 120px;
+}
+
+.reserva-grid {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px;
+    margin: 0 auto;
+}
+
+.input-reserva {
+    align-self: center;
+    padding: 12px 76px 14px 8px;
+    border-radius: 4px;
+    border: none;
+    justify-self: start;
+}
+
+.input-reserva::placeholder {
+    font-size: .9rem;
+    color: #c4c4c4;
+}
+
+.reserva-grid button {
+    cursor: pointer;
+    grid-column: 3;
+    grid-row: 1/-1;
+    justify-self: center;
+    padding: 20px 80px;
+    border-radius: 6px;
+    background-color: tomato;
+    border: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.reserva-grid button:hover {
+    opacity: .8;
+}
+
+@media(max-width: 900px) {
+
+    .reserva-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reserva-grid button {
+        grid-column: 1/-1;
+        grid-row: 5;
+    }
+
+    .input-reserva {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 600px) {
+    .reserva-grid {
+        background-color: transparent; /* possiveis alteraçoes futuras */
+    }
+}
+
+/* SCROLL JS */
+
+.js-scroll {
+    opacity: 0;
+}
+
+.js-scroll.ativo {
+    opacity: 1;
+    animation: scrollSlide .6s forwards;
+}
+
+@keyframes scrollSlide {
+    from {
+        transform: translate3d(-90px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* FOOTER */
+
+footer {
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('./assets/bg-footer.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    padding: 60px;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 3rem;
+    grid-column: 1;
+    grid-row: 1;
+    color: #ffffff;
+}
+
+footer p {
+    color: #ffffff;
+    grid-column: 1;
+    max-width: 50%;
+    justify-self: center;
+    font-size: 1.3rem;
+}
+
+.network-footer { /* alterar tamanho ou remover */
+    color: #ffb87a;
+    display: grid;
+    grid-row: 1;
+    justify-self: center;
+    gap: 30px;
+    font-size: 1.23rem;
+}
+
+.company {
+    grid-row: 3;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+}
+
+.company h6 {
+    text-align: center;
+    align-self: center;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.icones-footer { /* alterar tamanho ou remover */
+    color: tomato;
+    font-size: 3rem;
+    display: flex;
+    gap: 70px;
+}
+
+.icones-footer i {
+    cursor: pointer;
+}
+
+.icones-footer i:hover {
+    color: red
+}
+
+@media(max-width: 500px) {
+    .network-footer {
+        display: none;
+    }
+
+    .icones-footer {
+        grid-column: 1/-1;
+        font-size: 1.5rem;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    footer h1 {
+        font-size: 2rem;
+    }
+
+    footer p {
+        max-width: 70%;
+    }
+
+    .company h6 {
+        font-size: 1rem;
+        grid-column: 1/-1;
+    }
+    
+}
